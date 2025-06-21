@@ -1,0 +1,212 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F18C8E, #305F72);
+  overflow: hidden;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background: linear-gradient(135deg, #F0B7A4, #568EA6);
+  border-radius: 20px 20px 0 0;
+  z-index: 0;
+}
+
+.profile-card .image {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F0B7A4, #568EA6);
+  padding: 4px;
+  margin-bottom: 20px;
+  z-index: 1;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-card .image:hover {
+  transform: scale(1.05);
+}
+
+.profile-card .image .profile-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.profile-card .image:hover .profile-img {
+  transform: scale(1.1);
+}
+
+.profile-card .text-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 25px;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card .text-data .name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.profile-card .details {
+  width: 100%;
+  z-index: 1;
+}
+
+.profile-card .details ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.profile-card .details ul li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.profile-card .details ul li:hover {
+  color: #fff;
+}
+
+.profile-card .details ul li i {
+  color: #F18C8E;
+  font-size: 18px;
+}
+
+.profile-card .media-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.profile-card .media-buttons .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #568EA6, #305F72);
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card .media-buttons .link:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #305F72, #568EA6);
+}
+
+.profile-card .media-buttons .link i {
+  transition: transform 0.3s ease;
+}
+
+.profile-card .media-buttons .link:hover i {
+  transform: rotate(15deg);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .profile-card {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .profile-card .image {
+    height: 90px;
+    width: 90px;
+  }
+
+  .profile-card .text-data .name {
+    font-size: 20px;
+  }
+
+  .profile-card .details ul li {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .profile-card .media-buttons .link {
+    height: 35px;
+    width: 35px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-card .text-data .name {
+    font-size: 18px;
+  }
+
+  .profile-card .details ul li {
+    font-size: 12px;
+  }
+
+  .profile-card .media-buttons .link {
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+  }
+}
