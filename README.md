@@ -2,7 +2,7 @@
 
 A beautiful and responsive profile card created using HTML and CSS. This project features a modern UI design with a soft gradient background, glassmorphism effect, social media buttons, and a user image.
 
-![Profile Card Preview](e.jpg)
+![Profile Card Screenshot](e.jpg)
 
 ## ✨ Features
 
@@ -25,10 +25,6 @@ A beautiful and responsive profile card created using HTML and CSS. This project
 - CSS3 (Flexbox, Gradients, Media Queries)
 - Boxicons for icons
 - Google Fonts – Poppins
-
-## 📸 Screenshot
-
-![Screenshot](e.jpg)
 
 ## 🔗 Demo
 
